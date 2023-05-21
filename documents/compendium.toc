@@ -1,0 +1,14 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {part}{I\hspace {1em}Matematica}{2}{}%
+\contentsline {chapter}{\numberline {1}Analisi}{3}{}%
+\contentsline {section}{\numberline {1.1}Premesse all'analisi}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Distanze e Intorni}{3}{}%
+\contentsline {section}{\numberline {1.2}Limiti}{5}{}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione e concetti di base}{5}{}%
+\contentsline {subsection}{\numberline {1.2.2}Operazioni}{6}{}%
+\contentsline {subsection}{\numberline {1.2.3}Teoremi fondamentali}{8}{}%
+\contentsline {subsection}{\numberline {1.2.4}Limiti notevoli}{9}{}%
+\contentsline {part}{II\hspace {1em}Fisica}{10}{}%
+\contentsline {chapter}{\numberline {2}Relativit\`{a}}{11}{}%
+\contentsline {chapter}{GNU Free Documentation License}{I}{}%
