@@ -7,7 +7,8 @@
 \usepackage{blindtext}
 \usepackage{multicol}
 \usepackage{geometry}
-
+\usepackage{fdsymbol}
+\usepackage{stmaryrd}
 
 \title{Compendium}
 \author{Matteo Galimberti}
@@ -327,7 +328,7 @@ Si hanno le forme indeterminate $\left[0^{0}\right]$, $\left[\infty^{0}\right]$ 
 
 \begin{theor}[Teorema del confronto]\label{th confr}
 	Siano $f(x), g(x), h(x)$ funzioni definite ciascuna su un intervallo e l'intersezione dei tre intervalli contenga $U=U(x_{0}) \ | \ \forall x \in U \quad f(x)\leq h(x) \leq g(x)$. Allora
-	$$\lim_{x \to x_{0}}f(x)=\lim_{x \to x_{0}}f(x)=L \quad \Longrightarrow \quad \lim_{x \to x_{0}}h(x)=L$$ 
+	$$\lim_{x \to x_{0}}f(x)=\lim_{x \to x_{0}}g(x)=L \quad \Longrightarrow \quad \lim_{x \to x_{0}}h(x)=L$$ 
 \end{theor}
 \begin{proof}
 	Per la definizione \ref{limite} di limite si ha
@@ -350,7 +351,32 @@ Si hanno le forme indeterminate $\left[0^{0}\right]$, $\left[\infty^{0}\right]$ 
 
 \begin{itemize}
 	\item $\displaystyle \lim_{x \to 0} \frac{\sin(x)}{x} = 1$
+	\begin{proof}
+	Essendo la funzione $y=\frac{\sin(x)}{x}$ pari, $\lim_{x \to 0^+} \frac{\sin(x)}{x}=\lim_{x \to 0^-} \frac{\sin(x)}{x}$. Scegliamo di calcolare il limite $\lim_{x \to 0^+} \frac{\sin(x)}{x}$.
+	Costruiamo una circonferenza goniometrica e prendiamo $BOC$ angolo al centro acuto e situato nel primo quadrante con $x$ la sua misura in radianti. Avendo dunque $0<x<\frac{\pi}{2}$ e $A$ punto di intersezione tra il prolungamento di $OC$ e la perpendicolare ad $OB$ in $B$; si ha:
+	\begin{itemize}
+		\item $A_{\triangle OBC}=\frac{1}{2} \cdot 1 \cdot \sin x$
+		\item $A_{\leftslice OBC}=\frac{1}{2} \cdot x$
+		\item $A_{\triangle OBA}=\frac{1}{2} \cdot 1 \cdot \tan x$
+	\end{itemize}
+	Quindi
+	$$\sin x<x<\tan x$$
+	Dividendo per $\sin x$ si ottiene
+	$$1<\frac{x}{\sin x}<\frac{1}{\cos x}$$
+	ovvero
+	\begin{equation}\label{eq sinxx}
+		\cos x<\frac{\sin x}{x}< 1
+	\end{equation}
+	Applichiamo il teorema \ref{th confr} del confronto all'equazione \eqref{eq 
+	sinxx}, avendo $f(x)=1$, $g(x)=\cos x$ e $h(x)=\frac{\sin x}{x}$ 
+	$$\lim_{x \to 0^+} f(x)=1 \textrm{ e} \lim_{x \to 0^+} g(x)=\lim_{x \to 0^+} \cos x=1 \Rightarrow \lim_{x \to 0^+} h(x)=\lim_{x \to 0^+} \frac{\sin x}{x}=1$$
+
+	\end{proof}
 	\item $\displaystyle \lim_{x \to 0} \frac{1 - \cos(x)}{x^2} = \frac{1}{2}$
+	\begin{proof}
+		$$\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \lim_{x \to 0} \frac{(1 - \cos x)(1 + \cos x)}{x^2(1 + \cos x)}= \lim_{x \to 0} \frac{1-\cos^2 x}{x^2(1 + \cos x)}=$$
+		$$=\lim_{x \to 0}\frac{\sin^2 x}{x^2}\frac{1}{1+\cos x}=1 \frac{1}{1+1}=\frac{1}{2}$$
+	\end{proof}
 	\item $\displaystyle \lim_{x \to 0} (1+x)^{\frac{1}{x}} = \mathit{e}$
 	\item $\displaystyle \lim_{x \to 0} \frac{\log_{a}(1+x)}{x} = \log_{a}\mathit{e}$
 	\item $\displaystyle \lim_{x \to 0} \frac{a^x-1}{x} = \ln a$
