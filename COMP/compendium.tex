@@ -377,9 +377,25 @@ Si hanno le forme indeterminate $\left[0^{0}\right]$, $\left[\infty^{0}\right]$ 
 		$$\lim_{x \to 0} \frac{1 - \cos x}{x^2} = \lim_{x \to 0} \frac{(1 - \cos x)(1 + \cos x)}{x^2(1 + \cos x)}= \lim_{x \to 0} \frac{1-\cos^2 x}{x^2(1 + \cos x)}=$$
 		$$=\lim_{x \to 0}\frac{\sin^2 x}{x^2}\frac{1}{1+\cos x}=1 \frac{1}{1+1}=\frac{1}{2}$$
 	\end{proof}
-	\item $\displaystyle \lim_{x \to 0} (1+x)^{\frac{1}{x}} = \mathit{e}$
+	\item $\displaystyle \lim_{x \to 0} (1+x)^{\frac{1}{x}} = \mathit{e}$ \\
+	Tale limite deriva direttamente della definizione di 
+	$$\mathit{e}:=\lim_{n \to \infty}(1+\frac{1}{n})^n$$
 	\item $\displaystyle \lim_{x \to 0} \frac{\log_{a}(1+x)}{x} = \log_{a}\mathit{e}$
+	\begin{proof}
+		$$\log_{a}\mathit{e}=\log_{a}\left[ \lim_{x \to 0}(1+x)^{\frac{1}{x}}\right]=$$
+		$$=\lim_{x \to 0}\left[\log_{a}(1+x)^{\frac{1}{x}}\right]=\lim_{x \to 0}\left[{\frac{1}{x}}\log_{a}(1+x)\right]=\lim_{x \to 0}\frac{\log_{a}(1+x)}{x}$$
+	\end{proof}
 	\item $\displaystyle \lim_{x \to 0} \frac{a^x-1}{x} = \ln a$
+	\begin{proof}
+		Dalla definizione di logaritmo
+		$$\log_{a}(1+x)=t \quad \textrm{ allora } \quad (1+x)=a^t $$
+		da cui
+		$$x=a^t-1$$
+		Scriviamo allora
+		$$\log_{a}\mathit{e}=\lim_{x \to 0}\frac{\log_a(1+x)}{x}=\lim_{t \to 0}\frac{t}{a^t-1}$$
+		e
+		$$\lim_{x \to 0} \frac{a^x-1}{x}=\frac{1}{\log_{a}e}=\ln a$$
+	\end{proof}
 \end{itemize}
 
 %\section{Continuit\`{a}}
